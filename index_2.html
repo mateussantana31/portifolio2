@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Mateus Santana | Business Intelligence, Power BI e soluções de dados para empresas.">
+<title>Mateus Santana | BI & Dados para Negócios</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#06101f;--bg2:#0a1729;--card:#0d1d32;--card2:#10243c;
+  --blue:#38bdf8;--blue2:#0ea5e9;--green:#34d399;--white:#f8fafc;
+  --text:#dce7f3;--muted:#8da2b8;--line:rgba(148,163,184,.15);
+  --shadow:0 20px 60px rgba(0,0,0,.28);--radius:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial, Helvetica, sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,calc(100% - 40px));margin:auto}
+nav{position:fixed;top:0;left:0;right:0;height:72px;z-index:1000;background:rgba(6,16,31,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav-in{height:100%;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:Arial, Helvetica, sans-serif;font-weight:800;font-size:20px;color:#fff}
+.logo span{color:var(--blue)}
+.navlinks{display:flex;gap:8px;align-items:center}
+.navlinks a{font-size:13px;color:var(--muted);padding:9px 13px;border-radius:10px}
+.navlinks a:hover{color:#fff;background:rgba(56,189,248,.08)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 19px;border-radius:12px;font-weight:700;font-size:14px;transition:.25s;border:1px solid transparent}
+.btn-primary{background:var(--blue);color:#03111f;box-shadow:0 10px 30px rgba(56,189,248,.18)}
+.btn-primary:hover{transform:translateY(-2px);background:#67cef9}
+.btn-ghost{border-color:var(--line);background:rgba(255,255,255,.025);color:#fff}
+.btn-ghost:hover{border-color:rgba(56,189,248,.5);background:rgba(56,189,248,.07)}
+.hero{padding:145px 0 90px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:650px;height:650px;right:-230px;top:-180px;background:radial-gradient(circle,rgba(56,189,248,.16),transparent 68%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:150px minmax(0,1fr) 370px;gap:34px;align-items:center}
+.badge{display:inline-flex;gap:8px;align-items:center;color:var(--blue);border:1px solid rgba(56,189,248,.22);background:rgba(56,189,248,.07);border-radius:999px;padding:7px 12px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:22px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green)}
+h1,h2,h3{font-family:Arial, Helvetica, sans-serif;line-height:1.12}
+h1{font-size:clamp(50px,4.2vw,62px);letter-spacing:-.018em;color:#fff;max-width:680px}
+h1 em{font-style:normal;color:var(--blue)}
+.hero p.lead{font-size:18px;line-height:1.75;color:var(--muted);max-width:620px;margin:28px 0 32px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+
+.hero-person{display:contents}.photo-frame{width:150px;height:150px;justify-self:center;align-self:start;margin-top:4px;flex:0 0 150px;border-radius:50%;padding:4px;background:linear-gradient(135deg,var(--blue),rgba(56,189,248,.15));box-shadow:0 16px 40px rgba(0,0,0,.28)}.photo-frame img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block;border:3px solid var(--bg)}.photo-missing{background:radial-gradient(circle at 50% 35%,rgba(56,189,248,.22),rgba(13,29,50,.9));position:relative}.photo-missing:after{content:'MS';position:absolute;inset:0;display:grid;place-items:center;font-family:Arial;font-weight:800;font-size:32px;color:var(--blue)}
+.hero-card{background:linear-gradient(145deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:28px;padding:26px;box-shadow:var(--shadow);position:relative}
+.hero-card:after{content:"";position:absolute;inset:10px;border:1px solid rgba(56,189,248,.08);border-radius:20px;pointer-events:none}
+.mini-label{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--blue);font-weight:700}
+.hero-card h3{font-size:27px;margin:10px 0 12px;color:#fff}
+.hero-card p{color:var(--muted);font-size:14px}
+.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:22px}
+.kpi{padding:16px;border-radius:14px;background:rgba(255,255,255,.035);border:1px solid var(--line)}
+.kpi strong{display:block;color:#fff;font-family:Arial, Helvetica, sans-serif;font-size:21px}.kpi span{font-size:11px;color:var(--muted)}
+section{padding:90px 0}
+.section-head{max-width:700px;margin-bottom:42px}
+.eyebrow{color:var(--blue);font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px}
+.section-head h2{font-size:clamp(32px,4vw,48px);color:#fff;letter-spacing:-.035em}
+.section-head p{color:var(--muted);margin-top:14px;font-size:16px}
+.problem-grid,.service-grid,.process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:27px;transition:.25s}
+.card:hover{transform:translateY(-4px);border-color:rgba(56,189,248,.35);box-shadow:var(--shadow)}
+.icon{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;background:rgba(56,189,248,.1);color:var(--blue);font-size:20px;margin-bottom:19px}
+.card h3{font-size:20px;color:#fff;margin-bottom:9px}
+.card p{color:var(--muted);font-size:14px}
+.dark-section{background:#071425;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.service-grid{grid-template-columns:repeat(4,1fr)}
+.service-card{padding:24px;border-radius:18px;background:linear-gradient(145deg,#0d1d32,#0a1729);border:1px solid var(--line)}
+.service-card h3{font-size:18px;margin:12px 0 8px;color:#fff}
+.service-card p{font-size:13px;color:var(--muted)}
+.service-card ul{list-style:none;margin-top:15px}
+.service-card li{font-size:12px;color:#a9bbcc;margin:7px 0;padding-left:15px;position:relative}
+.service-card li:before{content:"✓";position:absolute;left:0;color:var(--green)}
+.process-grid{grid-template-columns:repeat(4,1fr)}
+.step{position:relative}
+.step-number{font-family:Arial, Helvetica, sans-serif;font-size:12px;color:var(--blue);font-weight:800;margin-bottom:18px}
+.step h3{font-size:19px;margin-bottom:9px;color:#fff}.step p{font-size:13px;color:var(--muted)}
+.projects{background:#050d1a}
+.project{margin-bottom:30px;background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden}
+.project-top{padding:27px 30px;display:flex;justify-content:space-between;gap:25px;align-items:flex-start}
+.project-copy{max-width:760px}
+.tags{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.tag{font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);padding:5px 9px;border-radius:999px;background:rgba(56,189,248,.08);border:1px solid rgba(56,189,248,.14)}
+.project h3{font-size:25px;color:#fff;margin-bottom:9px}.project p{color:var(--muted);font-size:14px}
+.project-note{min-width:190px;padding:15px;border-radius:14px;background:rgba(255,255,255,.035);border:1px solid var(--line)}
+.project-note strong{display:block;color:#fff;font-size:13px}.project-note span{color:var(--muted);font-size:11px}
+.iframe{margin:0 20px 20px;border:1px solid var(--line);border-radius:15px;overflow:hidden;background:#000}
+iframe{width:100%;height:520px;border:0;display:block}
+.client-proof{display:grid;grid-template-columns:.9fr 1.1fr;gap:25px;align-items:stretch}
+.quote-card{padding:35px;border-radius:24px;background:linear-gradient(145deg,#0c2036,#0b1728);border:1px solid var(--line)}
+.quote-card h3{font-size:28px;color:#fff;margin-bottom:13px}.quote-card p{color:var(--muted);font-size:15px}
+.list-card{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.proof{padding:20px;border:1px solid var(--line);background:var(--card);border-radius:16px}
+.proof strong{display:block;color:#fff;font-size:14px;margin-bottom:4px}.proof span{font-size:12px;color:var(--muted)}
+.cta{padding:80px 0}.cta-box{border-radius:30px;padding:55px;background:radial-gradient(circle at 80% 10%,rgba(56,189,248,.18),transparent 35%),linear-gradient(145deg,#0e263f,#09182a);border:1px solid rgba(56,189,248,.2);text-align:center;box-shadow:var(--shadow)}
+.cta-box h2{font-size:clamp(34px,5vw,54px);color:#fff}.cta-box p{max-width:650px;margin:16px auto 27px;color:var(--muted)}
+footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+.footer-in{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:900px){
+ .hero-grid{grid-template-columns:130px minmax(0,1fr);gap:28px}.hero-card{grid-column:1 / -1}.problem-grid,.service-grid,.process-grid{grid-template-columns:1fr 1fr}
+ .navlinks a{display:none}.navlinks .nav-cta{display:inline-flex}.hero{padding-top:120px}
+}
+@media(max-width:620px){
+ .container{width:min(100% - 28px,1160px)}section{padding:65px 0}
+ .problem-grid,.service-grid,.process-grid,.list-card{grid-template-columns:1fr}
+ .hero-grid{grid-template-columns:1fr;gap:28px}.photo-frame{justify-self:start}.hero-card{grid-column:auto}.hero p.lead{font-size:16px;line-height:1.7}.project-top{padding:22px;display:block}.project-note{margin-top:17px}.iframe{margin:0 10px 10px}iframe{height:390px}
+ .cta-box{padding:38px 22px}.nav-cta{padding:10px 12px;font-size:12px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-in">
+    <a class="logo" href="#inicio">MS<span>.</span></a>
+    <div class="navlinks">
+      <a href="#solucoes">Soluções</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#processo">Como funciona</a>
+      <a href="#contato" class="btn btn-primary nav-cta">Falar comigo</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div class="photo-frame"><img src="foto.png" alt="Foto de Mateus Santana" onerror="this.style.display='none';this.parentElement.classList.add('photo-missing')"></div>
+    <div class="hero-copy">
+      <div class="badge"><span class="dot"></span> BI & Dados para negócios</div>
+      <h1>Seus dados podem<br>mostrar onde sua empresa<br><em>pode melhorar.</em></h1>
+      <p class="lead">Transformo dados espalhados em dashboards claros, indicadores úteis e informações que ajudam você a acompanhar o negócio e tomar decisões com mais segurança.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#projetos">Ver projetos e dashboards →</a>
+        <a class="btn btn-ghost" href="https://wa.me/5531996848473?text=Ol%C3%A1%20Mateus%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20BI." target="_blank">Quero conversar</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <span class="mini-label">O que eu entrego</span>
+      <h3>Visibilidade para o seu negócio.</h3>
+      <p>Uma solução de BI não precisa começar com sistemas complexos. Podemos organizar as informações que sua empresa já possui e transformá-las em uma visão gerencial.</p>
+      <div class="kpis">
+        <div class="kpi"><strong>Power BI</strong><span>Dashboards interativos</span></div>
+        <div class="kpi"><strong>SQL</strong><span>Dados estruturados</span></div>
+        <div class="kpi"><strong>KPIs</strong><span>Indicadores de negócio</span></div>
+        <div class="kpi"><strong>Automação</strong><span>Menos trabalho manual</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="solucoes">
+<div class="container">
+  <div class="section-head">
+    <div class="eyebrow">Por que BI?</div>
+    <h2>O problema geralmente não é falta de dados.</h2>
+    <p>É ter informação espalhada, gastar tempo montando relatórios e não conseguir enxergar rapidamente o que está acontecendo.</p>
+  </div>
+  <div class="problem-grid">
+    <div class="card"><div class="icon">◈</div><h3>Informações espalhadas</h3><p>Excel, sistemas, planilhas e outros arquivos podem ser organizados em uma visão única para acompanhamento.</p></div>
+    <div class="card"><div class="icon">⌁</div><h3>Relatórios manuais</h3><p>Indicadores recorrentes podem ser estruturados para reduzir tarefas repetitivas e facilitar a atualização.</p></div>
+    <div class="card"><div class="icon">↗</div><h3>Decisões sem contexto</h3><p>KPIs e análises ajudam a transformar números isolados em uma leitura mais clara do negócio.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="dark-section" id="servicos">
+<div class="container">
+  <div class="section-head">
+    <div class="eyebrow">Soluções</div>
+    <h2>BI pensado para a realidade da sua empresa.</h2>
+    <p>O projeto pode começar pequeno e evoluir conforme a necessidade do negócio.</p>
+  </div>
+  <div class="service-grid">
+    <div class="service-card"><div class="icon">▦</div><h3>Dashboards</h3><p>Painéis para acompanhar os principais indicadores.</p><ul><li>Power BI</li><li>KPIs e metas</li><li>Filtros e análises</li></ul></div>
+    <div class="service-card"><div class="icon">⌘</div><h3>Organização de dados</h3><p>Estruturação das fontes que a empresa já utiliza.</p><ul><li>Excel e planilhas</li><li>SQL e bancos de dados</li><li>Padronização</li></ul></div>
+    <div class="service-card"><div class="icon">↻</div><h3>Automação</h3><p>Redução de atividades manuais relacionadas aos dados.</p><ul><li>Atualizações</li><li>Fluxos</li><li>Integrações</li></ul></div>
+    <div class="service-card"><div class="icon">◎</div><h3>Análise gerencial</h3><p>Indicadores construídos a partir das perguntas do negócio.</p><ul><li>Vendas</li><li>Financeiro</li><li>Operações</li></ul></div>
+  </div>
+</div>
+</section>
+
+<section id="processo">
+<div class="container">
+  <div class="section-head">
+    <div class="eyebrow">Como funciona</div>
+    <h2>Do dado bruto ao painel de gestão.</h2>
+    <p>O objetivo é entender primeiro o negócio. A ferramenta vem depois.</p>
+  </div>
+  <div class="process-grid">
+    <div class="card step"><div class="step-number">01 · ENTENDER</div><h3>Diagnóstico</h3><p>Conversamos sobre a operação, os principais problemas e quais informações realmente importam.</p></div>
+    <div class="card step"><div class="step-number">02 · ORGANIZAR</div><h3>Dados</h3><p>Mapeio as fontes, estruturo os dados e defino os indicadores que farão parte da solução.</p></div>
+    <div class="card step"><div class="step-number">03 · CONSTRUIR</div><h3>Dashboard</h3><p>Desenvolvo uma interface visual, interativa e adaptada à rotina de quem vai utilizar o painel.</p></div>
+    <div class="card step"><div class="step-number">04 · EVOLUIR</div><h3>Acompanhamento</h3><p>A solução pode evoluir com novos indicadores, automações e necessidades do negócio.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="projects" id="projetos">
+<div class="container">
+  <div class="section-head">
+    <div class="eyebrow">Projetos demonstrativos</div>
+    <h2>Veja o BI funcionando na prática.</h2>
+    <p>Alguns projetos que demonstram diferentes aplicações de dados, indicadores e dashboards interativos.</p>
+  </div>
+
+  <article class="project">
+    <div class="project-top">
+      <div class="project-copy"><div class="tags"><span class="tag">Saúde</span><span class="tag">Power BI</span><span class="tag">SQL</span></div><h3>Gestão de Saúde Municipal</h3><p>Dashboard para acompanhamento de atendimentos, internação, regulação e farmácia, com indicadores de volume, tempo de espera e desempenho das unidades.</p></div>
+      <div class="project-note"><strong>Aplicação</strong><span>Acompanhamento operacional e gerencial</span></div>
+    </div>
+    <div class="iframe"><iframe loading="lazy" src="https://app.powerbi.com/view?r=eyJrIjoiZWQ2NmFkMzUtNTYxMi00NGE3LTk5OWItMmIzNmQ5ZjhhNTBlIiwidCI6IjAzMTBlMmJhLWU4ZWEtNDdjYS1hNTEzLTU4NzQzZTY1ZWVjZCJ9" allowfullscreen title="Dashboard Gestão de Saúde Municipal"></iframe></div>
+  </article>
+
+  <article class="project">
+    <div class="project-top">
+      <div class="project-copy"><div class="tags"><span class="tag">Vendas</span><span class="tag">Power BI</span><span class="tag">Excel</span></div><h3>Análise de Vendas</h3><p>Exemplo de painel para gestores acompanharem desempenho de vendas, volume, ticket médio, evolução temporal e comparação entre períodos.</p></div>
+      <div class="project-note"><strong>Aplicação</strong><span>Comercial e acompanhamento de resultados</span></div>
+    </div>
+    <div class="iframe"><iframe loading="lazy" src="https://app.powerbi.com/view?r=eyJrIjoiMTAyZDI1NWMtYWQ5Ni00ODU1LTg5MDAtYjJlZTc2ZDhhYWQ1IiwidCI6IjAzMTBlMmJhLWU4ZWEtNDdjYS1hNTEzLTU4NzQzZTY1ZWVjZCJ9" allowfullscreen title="Dashboard Análise de Vendas"></iframe></div>
+  </article>
+
+  <article class="project">
+    <div class="project-top">
+      <div class="project-copy"><div class="tags"><span class="tag">Financeiro</span><span class="tag">Power BI</span><span class="tag">Excel</span></div><h3>Análise Financeira</h3><p>Painel para acompanhamento de recebimentos, pagamentos, impostos, lucro e margem mensal, apoiando a leitura financeira do negócio.</p></div>
+      <div class="project-note"><strong>Aplicação</strong><span>Controle e visão financeira</span></div>
+    </div>
+    <div class="iframe"><iframe loading="lazy" src="https://app.powerbi.com/view?r=eyJrIjoiNjBjMDFkMmEtNWJlOS00MTA4LTgwMjMtZDM0M2Q5NjU3NGMwIiwidCI6IjAzMTBlMmJhLWU4ZWEtNDdjYS1hNTEzLTU4NzQzZTY1ZWVjZCJ9" allowfullscreen title="Dashboard Análise Financeira"></iframe></div>
+  </article>
+
+  <article class="project">
+    <div class="project-top">
+      <div class="project-copy"><div class="tags"><span class="tag">Comercial</span><span class="tag">Power BI</span><span class="tag">SQL</span></div><h3>Análise Comercial</h3><p>Simulação de cenário corporativo com visualizações dinâmicas para demonstrar como o Power BI pode apoiar análises comerciais e decisões estratégicas.</p></div>
+      <div class="project-note"><strong>Aplicação</strong><span>Visão comercial e indicadores</span></div>
+    </div>
+    <div class="iframe"><iframe loading="lazy" src="https://app.powerbi.com/view?r=eyJrIjoiYTc4NGM4ZWQtMTAyNC00NmI5LWE2N2QtNzFlOGQ2MDEzYWUwIiwidCI6IjAzMTBlMmJhLWU4ZWEtNDdjYS1hNTEzLTU4NzQzZTY1ZWVjZCJ9" allowfullscreen title="Dashboard Análise Comercial"></iframe></div>
+  </article>
+
+  <article class="project">
+    <div class="project-top">
+      <div class="project-copy"><div class="tags"><span class="tag">Meio ambiente</span><span class="tag">Power BI</span><span class="tag">SQL</span></div><h3>Monitoramento da Fauna Brasileira</h3><p>Projeto demonstrativo que transforma dados de biodiversidade em indicadores visuais para análise de espécies, distribuição e prioridades de conservação.</p></div>
+      <div class="project-note"><strong>Aplicação</strong><span>Indicadores e exploração de dados</span></div>
+    </div>
+    <div class="iframe"><iframe loading="lazy" src="https://app.powerbi.com/view?r=eyJrIjoiZmFhY2U0ZmMtOTcyYy00MTM4LWE2ODUtOTcyZmE4NzNmM2Y0IiwidCI6IjFmMzUxZWMyLWZhOTgtNGI4Ny05MzU2LWQxNzAxN2E3ZTgzZiJ9" allowfullscreen title="Dashboard Monitoramento da Fauna Brasileira"></iframe></div>
+  </article>
+</div>
+</section>
+
+
+
+<section class="cta" id="contato">
+<div class="container">
+  <div class="cta-box">
+    <div class="eyebrow">Vamos conversar?</div>
+    <h2>Seu negócio já tem os dados.<br>Vamos descobrir o que eles podem mostrar.</h2>
+    <p>Se você hoje controla vendas, financeiro, estoque, produção ou operações em planilhas e sistemas, podemos conversar sobre como transformar essas informações em uma visão gerencial.</p>
+    <div class="actions" style="justify-content:center">
+      <a class="btn btn-primary" href="https://wa.me/5531996848473?text=Ol%C3%A1%20Mateus%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20avaliar%20um%20projeto%20de%20BI." target="_blank">💬 Falar pelo WhatsApp</a>
+      <a class="btn btn-ghost" href="mailto:mateus31augusto@gmail.com">✉ Enviar e-mail</a>
+    </div>
+  </div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container footer-in">
+  <span>© 2026 Mateus Santana · BI & Dados</span>
+  <span>Power BI · SQL · Dashboards · Análise de Dados</span>
+</div>
+</footer>
+</body>
+</html>
