@@ -128,7 +128,81 @@ section{padding:110px 0}.section-head{max-width:830px;margin-bottom:50px}.sectio
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-copy{grid-column:1;grid-row:1}.hero-person{grid-column:1;grid-row:2}.photo-frame{margin:0}.hero-card{grid-column:1;grid-row:3;margin-top:0;max-width:650px}.hero{padding-top:125px}.navlinks a:not(.nav-cta){display:none}}
 @media(max-width:620px){.container{width:calc(100% - 34px)}.hero{padding:118px 0 75px}.hero-grid{gap:25px}.hero h1{font-size:clamp(39px,10vw,54px)}.hero p.lead{font-size:16px;margin:23px 0 26px}.hero-card{padding:24px}.photo-frame{width:86px;height:86px}.ticker-inner{gap:10px;font-size:10px;padding:0 12px}.ticker-inner b{font-size:12px}section{padding:72px 0}.section-head h2{font-size:clamp(33px,9vw,45px)}.project-top{padding:23px}.project-note{min-width:0}.iframe{margin:0 10px 10px}.cta-box{padding:45px 22px}.floating-contact{right:14px;bottom:14px;padding:12px 15px;font-size:12px}.actions .btn{width:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{animation-duration:.01ms!important}}
+
   
+/* CORREÇÃO DA POSIÇÃO DA FOTO */
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 110px minmax(0, 1fr) 470px;
+    gap: 28px;
+    align-items: center;
+}
+
+/* Foto ao lado esquerdo do título */
+.hero-person {
+    display: contents;
+}
+
+.photo-frame {
+    grid-column: 1;
+    grid-row: 1;
+    width: 105px;
+    height: 105px;
+    margin: 0;
+    justify-self: start;
+    align-self: start;
+    margin-top: 10px;
+}
+
+/* Texto principal */
+.hero-copy {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+}
+
+/* Card da direita */
+.hero-card {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+/* Responsividade */
+@media (max-width: 1100px) {
+    .hero-grid {
+        grid-template-columns: 105px minmax(0, 1fr);
+    }
+
+    .hero-card {
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+}
+
+@media (max-width: 620px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .photo-frame {
+        grid-column: 1;
+        grid-row: 1;
+        margin-top: 0;
+    }
+
+    .hero-copy {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .hero-card {
+        grid-column: 1;
+        grid-row: 3;
+    }
+}
+
 </style>
 </head>
 <body>
