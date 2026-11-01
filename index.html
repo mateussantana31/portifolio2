@@ -130,57 +130,84 @@ section{padding:110px 0}.section-head{max-width:830px;margin-bottom:50px}.sectio
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{animation-duration:.01ms!important}}
 
   
-/* CORREÇÃO DA POSIÇÃO DA FOTO */
 
+/* ========================================
+   AJUSTES DO HERO - FOTO E CARD
+======================================== */
+
+/* Estrutura principal */
 .hero-grid {
     display: grid;
-    grid-template-columns: 110px minmax(0, 1fr) 470px;
+    grid-template-columns: 145px minmax(0, 1fr) 470px;
     gap: 28px;
-    align-items: center;
+    align-items: start;
 }
 
-/* Foto ao lado esquerdo do título */
-.hero-person {
-    display: contents;
-}
-
+/* Foto maior e mais abaixo */
 .photo-frame {
     grid-column: 1;
     grid-row: 1;
-    width: 105px;
-    height: 105px;
-    margin: 0;
+
+    width: 135px;
+    height: 135px;
+
+    margin: 110px 0 0 0;
     justify-self: start;
     align-self: start;
-    margin-top: 10px;
+
+    border-radius: 50%;
 }
 
-/* Texto principal */
+/* Foto interna */
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Conteúdo principal */
 .hero-copy {
     grid-column: 2;
     grid-row: 1;
     min-width: 0;
 }
 
-/* Card da direita */
+/* Card da direita - mais para cima */
 .hero-card {
     grid-column: 3;
     grid-row: 1;
+
+    margin-top: 40px;
+    align-self: start;
 }
 
-/* Responsividade */
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
 @media (max-width: 1100px) {
+
     .hero-grid {
-        grid-template-columns: 105px minmax(0, 1fr);
+        grid-template-columns: 130px minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    .photo-frame {
+        width: 120px;
+        height: 120px;
+        margin-top: 110px;
     }
 
     .hero-card {
         grid-column: 1 / -1;
         grid-row: 2;
+        margin-top: 20px;
     }
 }
 
 @media (max-width: 620px) {
+
     .hero-grid {
         grid-template-columns: 1fr;
         gap: 24px;
@@ -189,7 +216,10 @@ section{padding:110px 0}.section-head{max-width:830px;margin-bottom:50px}.sectio
     .photo-frame {
         grid-column: 1;
         grid-row: 1;
-        margin-top: 0;
+
+        width: 125px;
+        height: 125px;
+        margin: 0;
     }
 
     .hero-copy {
@@ -200,8 +230,10 @@ section{padding:110px 0}.section-head{max-width:830px;margin-bottom:50px}.sectio
     .hero-card {
         grid-column: 1;
         grid-row: 3;
+        margin-top: 0;
     }
 }
+
 
 </style>
 </head>
