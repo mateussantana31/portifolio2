@@ -1,3 +1,7 @@
+Claude
+
+
+Index · HTML
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -32,7 +36,7 @@ button{font:inherit;cursor:pointer}
 .container{width:min(1180px,calc(100% - 48px));margin:auto}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
 .v2-grid{background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:40px 40px}
-
+ 
 /* tipografia */
 h1,h2,h3{font-family:var(--font);line-height:1.1;letter-spacing:-.04em;color:#fff}
 .eyebrow{color:var(--blue);font:700 12px/1.3 var(--font);letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
@@ -40,7 +44,7 @@ h1,h2,h3{font-family:var(--font);line-height:1.1;letter-spacing:-.04em;color:#ff
 .section-head{max-width:760px;margin-bottom:46px}
 .section-head h2{font-size:clamp(32px,4.2vw,52px)}
 .section-head p{color:var(--muted);margin-top:16px;font-size:17px;line-height:1.65}
-
+ 
 /* botões */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 20px;border-radius:999px;font-weight:700;font-size:14px;transition:.25s;border:1px solid transparent;white-space:nowrap}
 .btn-ghost{border-color:var(--line2);background:rgba(255,255,255,.03);color:#fff}
@@ -54,7 +58,7 @@ h1,h2,h3{font-family:var(--font);line-height:1.1;letter-spacing:-.04em;color:#ff
 .v2-btn.sm .v2-btn__seta{width:32px;height:32px}
 .v2-btn.sm .v2-btn__seta svg{width:16px;height:16px}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(56,189,248,.5)}70%{box-shadow:0 0 0 14px rgba(56,189,248,0)}100%{box-shadow:0 0 0 0 rgba(56,189,248,0)}}
-
+ 
 /* nav */
 nav{position:fixed;top:0;left:0;right:0;height:76px;z-index:1000;background:rgba(6,16,31,.84);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
 .nav-in{height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}
@@ -65,19 +69,22 @@ nav{position:fixed;top:0;left:0;right:0;height:76px;z-index:1000;background:rgba
 .navlinks a.nl:hover{color:#fff;background:rgba(56,189,248,.09)}
 .nav-cta{margin-left:10px}
 .progress{position:absolute;left:0;bottom:-1px;height:2px;width:0;background:linear-gradient(90deg,var(--blue),var(--green));transition:width .1s}
-
+ 
 /* hero */
 .hero{position:relative;padding:150px 0 130px;overflow:hidden;isolation:isolate}
 .hero::before{content:"";position:absolute;width:760px;height:760px;right:-240px;top:-260px;background:radial-gradient(circle,rgba(56,189,248,.2),transparent 66%);z-index:-1;pointer-events:none}
 .hero::after{content:"";position:absolute;width:520px;height:520px;left:-200px;bottom:-260px;background:radial-gradient(circle,rgba(52,211,153,.12),transparent 66%);z-index:-1;pointer-events:none}
 .hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:clamp(36px,5vw,84px);align-items:center}
 .person{display:flex;align-items:center;gap:16px;margin-bottom:28px}
-.photo-frame{width:120px;height:120px;flex:none;border-radius:50%;padding:3px;background:linear-gradient(135deg,var(--blue),rgba(52,211,153,.4));box-shadow:0 14px 34px rgba(0,0,0,.35)}
+.photo-frame{width:110px;height:110px;flex:none;border-radius:50%;padding:3px;background:linear-gradient(135deg,var(--blue),rgba(52,211,153,.4));box-shadow:0 14px 34px rgba(0,0,0,.35)}
 .photo-frame img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block;border:3px solid var(--bg)}
 .photo-missing{background:radial-gradient(circle at 50% 35%,rgba(56,189,248,.24),rgba(13,29,50,.9));position:relative}
 .photo-missing::after{content:'MS';position:absolute;inset:0;display:grid;place-items:center;font-weight:800;font-size:24px;color:var(--blue)}
 .person strong{display:block;color:#fff;font-size:17px;letter-spacing:-.02em}
 .person .badge{margin:6px 0 0}
+.li-link{display:flex;width:fit-content;align-items:center;gap:8px;margin-top:10px;font:600 12px/1 var(--mono);letter-spacing:.04em;color:#7dd3fc;border-bottom:1px solid rgba(56,189,248,.4);padding-bottom:4px;transition:.2s}
+.li-link svg{width:15px;height:15px;flex:none}
+.li-link:hover{color:#fff;border-color:#fff}
 .badge{display:inline-flex;gap:8px;align-items:center;color:var(--blue);border:1px solid rgba(56,189,248,.24);background:rgba(56,189,248,.07);border-radius:999px;padding:7px 12px;font:600 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase}
 .dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green);animation:blink 1.6s ease-in-out infinite}
 @keyframes blink{50%{opacity:.35}}
@@ -99,7 +106,7 @@ h1 em{font-style:normal;color:var(--blue);background:linear-gradient(90deg,var(-
 .spark i{flex:1;background:rgba(56,189,248,.22);border-radius:3px 3px 0 0;height:var(--h);transform-origin:bottom;animation:grow 1.2s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i)*70ms)}
 .spark i:nth-child(8){background:var(--green)}
 @keyframes grow{from{transform:scaleY(0)}}
-
+ 
 /* faixas cruzadas */
 .cross-ribbons{height:170px;position:relative;overflow:hidden;margin-top:-70px;z-index:2;isolation:isolate}
 .ribbon{position:absolute;left:-7%;width:114%;height:50px;display:flex;align-items:center;overflow:hidden;white-space:nowrap}
@@ -110,7 +117,7 @@ h1 em{font-style:normal;color:var(--blue);background:linear-gradient(90deg,var(-
 .ribbon-loop b{color:var(--blue);font-size:19px;font-weight:900}
 .ribbon-back .ribbon-loop b{color:var(--blue2)}
 @keyframes flow{to{transform:translateX(-50%)}}
-
+ 
 /* ferramentas */
 .tools{border-bottom:1px solid var(--line);background:#0a1626;text-align:center;padding:34px 0;overflow:hidden}
 .tools>.label{color:var(--subtle);margin-bottom:22px}
@@ -120,14 +127,14 @@ h1 em{font-style:normal;color:var(--blue);background:linear-gradient(90deg,var(-
 .tools-set{display:flex;align-items:center;gap:56px;padding-right:56px;flex:none}
 .tool-item{display:inline-flex;align-items:center;gap:11px;font-size:17px;font-weight:700;letter-spacing:-.03em;color:#f1f5f9;white-space:nowrap}
 .tool-icon{width:26px;height:26px;flex:none}
-
+ 
 /* seções */
 section{padding:100px 0}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:none}
 .bl-w{display:inline-block;opacity:0;transform:translateY(.35em);filter:blur(4px);transition:opacity .5s ease,transform .5s ease,filter .5s ease;transition-delay:calc(var(--i)*50ms)}
 .in .bl-w{opacity:1;transform:none;filter:none}
-
+ 
 /* problema */
 .problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .card{background:linear-gradient(160deg,rgba(56,189,248,.06),var(--card) 55%);border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:.25s}
@@ -137,7 +144,7 @@ section{padding:100px 0}
 .symbol::after{content:"";position:absolute;top:8px;right:8px;width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green)}
 .card h3{font-size:21px;margin-bottom:10px}
 .card p{color:var(--muted);font-size:14.5px;line-height:1.65}
-
+ 
 /* processo (superfície clara) */
 .process{background-color:#f3f6fa;background-image:linear-gradient(rgba(15,35,60,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(15,35,60,.05) 1px,transparent 1px);background-size:40px 40px;color:#0e1b2c;border-top:1px solid #e1e8f0;border-bottom:1px solid #e1e8f0}
 .process .eyebrow{color:#0369a1}
@@ -165,7 +172,7 @@ section{padding:100px 0}
 .checks b{color:var(--green);flex:none}
 .dark-card .v2-btn{margin-top:auto;align-self:flex-start;animation:none}
 .dark-card .spacer{flex:1;min-height:28px}
-
+ 
 /* projetos */
 .projects{background:var(--bg3);border-top:1px solid var(--line)}
 .filters{display:flex;gap:10px;flex-wrap:wrap;margin:-14px 0 34px}
@@ -193,7 +200,7 @@ section{padding:100px 0}
 .frame-bar a{font:600 11px/1 var(--mono);color:var(--blue);letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid rgba(56,189,248,.5);padding-bottom:3px;white-space:nowrap}
 .frame-bar a:hover{color:#fff;border-color:#fff}
 iframe{width:100%;height:540px;border:0;display:block;background:#fff}
-
+ 
 /* CTA */
 .cta{padding:100px 0 110px;position:relative;overflow:hidden}
 .cta-box{position:relative;border-radius:32px;padding:clamp(40px,6vw,72px) clamp(24px,5vw,60px);background:radial-gradient(circle at 82% 8%,rgba(56,189,248,.22),transparent 38%),radial-gradient(circle at 8% 100%,rgba(52,211,153,.12),transparent 40%),linear-gradient(145deg,#0e263f,#09182a);border:1px solid rgba(56,189,248,.24);text-align:center;box-shadow:var(--shadow);overflow:hidden}
@@ -205,7 +212,7 @@ iframe{width:100%;height:540px;border:0;display:block;background:#fff}
 .cta-box h2 span{color:var(--blue)}
 .cta-box>p{max-width:660px;margin:20px auto 30px;color:var(--muted);font-size:17px;line-height:1.7}
 .cta-box .actions{justify-content:center}
-
+ 
 /* barra "diagnóstico" */
 .bar-meta{display:flex;justify-content:space-between;gap:12px;font:500 11px/1.4 var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--subtle);margin-bottom:12px}
 .bar-meta strong{color:#fff;font-weight:500}
@@ -216,19 +223,19 @@ iframe{width:100%;height:540px;border:0;display:block;background:#fff}
 .bar.in i.cur{animation:blink 1s ease-in-out 1.3s infinite}
 .bar i.off{background:#1d3248}
 .cta-bar{max-width:560px;margin:34px auto 0;text-align:left}
-
+ 
 /* footer */
 footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px}
 .footer-in{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
 .footer-in a{text-decoration:underline;text-decoration-color:#33506b;text-underline-offset:3px}
 .footer-in a:hover{color:#fff}
-
+ 
 /* WhatsApp flutuante */
 .wa{position:fixed;right:20px;bottom:20px;z-index:900;width:58px;height:58px;border-radius:50%;background:var(--green);color:#03231a;display:grid;place-items:center;box-shadow:0 12px 30px rgba(0,0,0,.4);transition:transform .2s;animation:pulseg 2.6s ease-out infinite}
 .wa:hover{transform:scale(1.08)}
 .wa svg{width:28px;height:28px}
 @keyframes pulseg{0%{box-shadow:0 0 0 0 rgba(52,211,153,.55),0 12px 30px rgba(0,0,0,.4)}70%{box-shadow:0 0 0 16px rgba(52,211,153,0),0 12px 30px rgba(0,0,0,.4)}100%{box-shadow:0 0 0 0 rgba(52,211,153,0),0 12px 30px rgba(0,0,0,.4)}}
-
+ 
 /* responsivo */
 @media(max-width:1000px){
   .hero-grid{grid-template-columns:1fr}
@@ -272,7 +279,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 </style>
 </head>
 <body>
-
+ 
 <nav>
   <div class="container nav-in">
     <a class="logo" href="#inicio" aria-label="MS Data, início">
@@ -287,7 +294,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-s
   </div>
   <div class="progress" id="progress"></div>
 </nav>
-
+ 
 <main>
 <!-- HERO -->
 <section class="hero v2-grid" id="inicio">
@@ -298,6 +305,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-s
         <div>
           <strong>Mateus Santana</strong>
           <div class="badge"><span class="dot"></span> BI &amp; Dados para negócios</div>
+          <a class="li-link" href="https://www.linkedin.com/in/mateus-santana-40a35a174" target="_blank" rel="noopener" aria-label="Ver perfil de Mateus Santana no LinkedIn (abre em nova aba)"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>Conheça minha trajetória <span aria-hidden="true">↗</span></a>
         </div>
       </div>
       <h1>Seus dados podem mostrar onde sua empresa <em>pode melhorar</em></h1>
@@ -321,13 +329,13 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-s
     </aside>
   </div>
 </section>
-
+ 
 <!-- FAIXAS -->
 <div class="cross-ribbons" aria-hidden="true">
   <div class="ribbon ribbon-back"><div class="ribbon-loop" data-items="POWER BI|DASHBOARDS|KPIs|DECISÕES MAIS SEGURAS"></div></div>
   <div class="ribbon ribbon-front"><div class="ribbon-loop" data-items="EXCEL|SQL|AUTOMAÇÃO|VISÃO GERENCIAL"></div></div>
 </div>
-
+ 
 <!-- FERRAMENTAS -->
 <section class="tools" aria-labelledby="tools-title" style="padding:34px 0">
   <p id="tools-title" class="label">Ferramentas que uso para organizar e visualizar seus dados</p>
@@ -341,7 +349,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-s
     </div>
   </div></div>
 </section>
-
+ 
 <!-- PROBLEMA -->
 <section id="solucoes">
   <div class="container">
@@ -357,7 +365,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-s
     </div>
   </div>
 </section>
-
+ 
 <!-- PROCESSO -->
 <section class="process" id="processo">
   <div class="container">
@@ -389,7 +397,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-s
     </div>
   </div>
 </section>
-
+ 
 <!-- PROJETOS -->
 <section class="projects" id="projetos">
   <div class="container">
@@ -398,13 +406,13 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-s
       <h2 data-split>Veja o BI funcionando na prática</h2>
       <p>Alguns projetos que demonstram diferentes aplicações de dados, indicadores e dashboards interativos.</p>
     </div>
-
+ 
     <div class="filters" role="group" aria-label="Filtrar projetos por tecnologia">
       <button class="chip on" data-filter="all">Todos</button>
       <button class="chip" data-filter="excel">Excel</button>
       <button class="chip" data-filter="sql">SQL / Banco de dados</button>
     </div>
-
+ 
     <article class="project reveal" data-tech="excel">
       <div class="project-top">
         <div class="pnum">01</div>
@@ -414,7 +422,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-s
       <div class="frame"><div class="frame-bar"><div class="dots"><i></i><i></i><i></i></div><span class="label">Dashboard interativo · Power BI</span><a href="https://app.powerbi.com/view?r=eyJrIjoiZDg5Njg5ZDUtZDI0ZS00YTI4LTljNjgtZjI2ZDQyZGVmNjMzIiwidCI6IjFmMzUxZWMyLWZhOTgtNGI4Ny05MzU2LWQxNzAxN2E3ZTgzZiJ9" target="_blank" rel="noopener">Tela cheia ↗</a></div>
       <iframe loading="lazy" src="https://app.powerbi.com/view?r=eyJrIjoiZDg5Njg5ZDUtZDI0ZS00YTI4LTljNjgtZjI2ZDQyZGVmNjMzIiwidCI6IjFmMzUxZWMyLWZhOTgtNGI4Ny05MzU2LWQxNzAxN2E3ZTgzZiJ9" allowfullscreen title="Dashboard Gestão Odontológica"></iframe></div>
     </article>
-
+ 
     <article class="project reveal" data-tech="sql">
       <div class="project-top">
         <div class="pnum">02</div>
@@ -424,7 +432,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-s
       <div class="frame"><div class="frame-bar"><div class="dots"><i></i><i></i><i></i></div><span class="label">Dashboard interativo · Power BI</span><a href="https://app.powerbi.com/view?r=eyJrIjoiYzViN2U4ZDUtMjk2NC00NjY4LTg3NTEtMjk1NzI5ZGM1YTc5IiwidCI6IjFmMzUxZWMyLWZhOTgtNGI4Ny05MzU2LWQxNzAxN2E3ZTgzZiJ9" target="_blank" rel="noopener">Tela cheia ↗</a></div>
       <iframe loading="lazy" src="https://app.powerbi.com/view?r=eyJrIjoiYzViN2U4ZDUtMjk2NC00NjY4LTg3NTEtMjk1NzI5ZGM1YTc5IiwidCI6IjFmMzUxZWMyLWZhOTgtNGI4Ny05MzU2LWQxNzAxN2E3ZTgzZiJ9" allowfullscreen title="Dashboard Gestão Inteligente para o Varejo"></iframe></div>
     </article>
-
+ 
     <article class="project reveal" data-tech="sql">
       <div class="project-top">
         <div class="pnum">03</div>
@@ -434,7 +442,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-s
       <div class="frame"><div class="frame-bar"><div class="dots"><i></i><i></i><i></i></div><span class="label">Dashboard interativo · Power BI</span><a href="https://app.powerbi.com/view?r=eyJrIjoiZWQ2NmFkMzUtNTYxMi00NGE3LTk5OWItMmIzNmQ5ZjhhNTBlIiwidCI6IjAzMTBlMmJhLWU4ZWEtNDdjYS1hNTEzLTU4NzQzZTY1ZWVjZCJ9" target="_blank" rel="noopener">Tela cheia ↗</a></div>
       <iframe loading="lazy" src="https://app.powerbi.com/view?r=eyJrIjoiZWQ2NmFkMzUtNTYxMi00NGE3LTk5OWItMmIzNmQ5ZjhhNTBlIiwidCI6IjAzMTBlMmJhLWU4ZWEtNDdjYS1hNTEzLTU4NzQzZTY1ZWVjZCJ9" allowfullscreen title="Dashboard Gestão de Saúde Municipal"></iframe></div>
     </article>
-
+ 
     <article class="project reveal" data-tech="excel">
       <div class="project-top">
         <div class="pnum">04</div>
@@ -444,7 +452,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-s
       <div class="frame"><div class="frame-bar"><div class="dots"><i></i><i></i><i></i></div><span class="label">Dashboard interativo · Power BI</span><a href="https://app.powerbi.com/view?r=eyJrIjoiMTAyZDI1NWMtYWQ5Ni00ODU1LTg5MDAtYjJlZTc2ZDhhYWQ1IiwidCI6IjAzMTBlMmJhLWU4ZWEtNDdjYS1hNTEzLTU4NzQzZTY1ZWVjZCJ9" target="_blank" rel="noopener">Tela cheia ↗</a></div>
       <iframe loading="lazy" src="https://app.powerbi.com/view?r=eyJrIjoiMTAyZDI1NWMtYWQ5Ni00ODU1LTg5MDAtYjJlZTc2ZDhhYWQ1IiwidCI6IjAzMTBlMmJhLWU4ZWEtNDdjYS1hNTEzLTU4NzQzZTY1ZWVjZCJ9" allowfullscreen title="Dashboard Análise de Vendas"></iframe></div>
     </article>
-
+ 
     <article class="project reveal" data-tech="excel">
       <div class="project-top">
         <div class="pnum">05</div>
@@ -454,7 +462,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-s
       <div class="frame"><div class="frame-bar"><div class="dots"><i></i><i></i><i></i></div><span class="label">Dashboard interativo · Power BI</span><a href="https://app.powerbi.com/view?r=eyJrIjoiNjBjMDFkMmEtNWJlOS00MTA4LTgwMjMtZDM0M2Q5NjU3NGMwIiwidCI6IjAzMTBlMmJhLWU4ZWEtNDdjYS1hNTEzLTU4NzQzZTY1ZWVjZCJ9" target="_blank" rel="noopener">Tela cheia ↗</a></div>
       <iframe loading="lazy" src="https://app.powerbi.com/view?r=eyJrIjoiNjBjMDFkMmEtNWJlOS00MTA4LTgwMjMtZDM0M2Q5NjU3NGMwIiwidCI6IjAzMTBlMmJhLWU4ZWEtNDdjYS1hNTEzLTU4NzQzZTY1ZWVjZCJ9" allowfullscreen title="Dashboard Análise Financeira"></iframe></div>
     </article>
-
+ 
     <article class="project reveal" data-tech="sql">
       <div class="project-top">
         <div class="pnum">06</div>
@@ -464,7 +472,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-s
       <div class="frame"><div class="frame-bar"><div class="dots"><i></i><i></i><i></i></div><span class="label">Dashboard interativo · Power BI</span><a href="https://app.powerbi.com/view?r=eyJrIjoiYTc4NGM4ZWQtMTAyNC00NmI5LWE2N2QtNzFlOGQ2MDEzYWUwIiwidCI6IjAzMTBlMmJhLWU4ZWEtNDdjYS1hNTEzLTU4NzQzZTY1ZWVjZCJ9" target="_blank" rel="noopener">Tela cheia ↗</a></div>
       <iframe loading="lazy" src="https://app.powerbi.com/view?r=eyJrIjoiYTc4NGM4ZWQtMTAyNC00NmI5LWE2N2QtNzFlOGQ2MDEzYWUwIiwidCI6IjAzMTBlMmJhLWU4ZWEtNDdjYS1hNTEzLTU4NzQzZTY1ZWVjZCJ9" allowfullscreen title="Dashboard Análise Comercial"></iframe></div>
     </article>
-
+ 
     <article class="project reveal" data-tech="sql">
       <div class="project-top">
         <div class="pnum">07</div>
@@ -476,7 +484,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-s
     </article>
   </div>
 </section>
-
+ 
 <!-- CTA -->
 <section class="cta v2-grid" id="contato">
   <div class="container">
@@ -487,6 +495,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-s
       <div class="actions">
         <a class="v2-btn" href="https://wa.me/5531996848473?text=Ol%C3%A1%20Mateus%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20avaliar%20um%20projeto%20de%20BI." target="_blank" rel="noopener"><span>Falar pelo WhatsApp</span><span class="v2-btn__seta"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span></a>
         <a class="btn btn-ghost" href="https://mail.google.com/mail/?view=cm&to=mateus.comercialbi@gmail.com" target="_blank" rel="noopener">✉ Enviar e-mail</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/mateus-santana-40a35a174" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a>
       </div>
       <div class="cta-bar" aria-hidden="true">
         <div class="bar-meta"><strong>Do dado ao painel</strong><span>Seu próximo passo começa aqui</span></div>
@@ -496,11 +505,11 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-s
   </div>
 </section>
 </main>
-
+ 
 <a class="wa" href="https://wa.me/5531996848473?text=Ol%C3%A1%20Mateus%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20BI." target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
 </a>
-
+ 
 <footer>
   <div class="container footer-in">
     <span>© 2026 Mateus Santana · BI &amp; Dados</span>
@@ -508,7 +517,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-s
     <a href="#inicio">Voltar ao início ↑</a>
   </div>
 </footer>
-
+ 
 <script>
 (function(){
   /* Faixas cruzadas: repete os itens para o loop contínuo */
@@ -517,17 +526,17 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-s
     for(var r=0;r<8;r++){items.forEach(function(t){html+='<span>'+t+'</span><b>///</b>';});}
     el.innerHTML=html;
   });
-
+ 
   /* Faixa de ferramentas: duplica o conjunto para o loop */
   var tt=document.getElementById('toolsTrack');
   if(tt){var s=tt.firstElementChild;for(var i=0;i<3;i++){var c=s.cloneNode(true);c.setAttribute('aria-hidden','true');tt.appendChild(c);}
     tt.style.animationDuration='60s';}
-
+ 
   /* Barra de progresso de leitura */
   var pg=document.getElementById('progress');
   function onScroll(){var h=document.documentElement;var m=h.scrollHeight-h.clientHeight;pg.style.width=(m>0?(h.scrollTop/m)*100:0)+'%';}
   addEventListener('scroll',onScroll,{passive:true});onScroll();
-
+ 
   /* Filtros de projetos */
   var chips=document.querySelectorAll('.chip'),projs=document.querySelectorAll('.project');
   chips.forEach(function(ch){ch.addEventListener('click',function(){
@@ -535,7 +544,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-s
     var f=ch.dataset.filter,n=0;
     projs.forEach(function(p){var show=(f==='all'||p.dataset.tech===f);p.hidden=!show;if(show){n++;p.querySelector('.pnum').textContent=String(n).padStart(2,'0');}});
   });});
-
+ 
   /* Revelação ao rolar + títulos palavra por palavra */
   function split(h){var n=0;
     (function walk(el){Array.prototype.slice.call(el.childNodes).forEach(function(node){
@@ -556,3 +565,5 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 </script>
 </body>
 </html>
+ 
+Claude terminou a resposta
